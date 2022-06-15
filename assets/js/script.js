@@ -2,10 +2,11 @@
 var generateBtn = document.querySelector("#generate");
 
 // character arrays
-var lowercase = [];
-var uppercase = [];
-var numeric = [];
-var special = [];
+var lowercase = "abcdefghijklmnopqrstuvwxy";
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXY";
+var numeric = "0123456789";
+var special = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+
 
 // generate the password bassed on prompted criteria
 function generatePassword() {
@@ -24,7 +25,6 @@ function generatePassword() {
   characterCriteria(passwordCriteria);
   password = passwordGenerator(passwordCriteria);
   return password;
-
 }
 
 // length of password criteria
@@ -52,7 +52,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
