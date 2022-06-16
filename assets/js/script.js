@@ -14,10 +14,7 @@ function generatePassword() {
   }
   // get character type criteria
   passwordCriteria.characterTypes = characterCriteria();
-  // if prompt cancelled, then return empty password.
-  if (passwordCriteria.characterTypes === false) {
-    return "";
-  }
+
   // return generated password
   return passwordGenerator(passwordCriteria);
 }
