@@ -55,7 +55,7 @@ function characterCriteria() {
   var foldlambda = function (acc, key) {
     // prompt for input
     input = confirm("Use " + key + " characters?\n(ok: yes, cancel: no):");
-    // if false, then update the key's value to false
+    // if false, then update the key's value to false so that charactertype will not be used in password.
     if (!input) {
       characterTypes[key] = input;
     }
@@ -88,7 +88,7 @@ function characterCriteria() {
 function passwordGenerator(passwordCriteria) {
   var password = "";
   var characterTypeCriteria = passwordCriteria.characterTypes;
-  // from criteria, create chartypes array that contains the keys that will be used.
+  // from criteria, create an array that contains the keys that lookup non-false values.
   var characterTypes = Object.keys(characterTypeCriteria).filter((key) => characterTypeCriteria[key]);
   // build up password
   for (var i = 0; i < passwordCriteria.length; i++) {
