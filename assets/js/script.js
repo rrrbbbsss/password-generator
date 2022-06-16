@@ -66,8 +66,8 @@ function characterCriteria() {
   while (true) {
   // special chars from: https://owasp.org/www-community/password-special-characters
     var characterTypes = {
-      lowercase: "abcdefghijklmnopqrstuvwxy",
-      uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXY",
+      lowercase: "abcdefghijklmnopqrstuvwxyz",
+      uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
       numeric: "0123456789",
       special: " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
     };
